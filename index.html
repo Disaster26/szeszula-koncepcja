@@ -8,10 +8,12 @@
 <meta name="description" content="Szeszuła Architekci - pracownia architektury, urbanistyki i wnętrz w Poznaniu. Domy, rezydencje, zabudowa wielorodzinna i koncepcje urbanistyczne, od warunków zabudowy po nadzór nad budową.">
 <meta name="theme-color" content="#111111">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="img/hero-m-640.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-800.webp 800w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-m-540.webp" imagesrcset="img/hero-m-360.webp 360w, img/hero-m-540.webp 540w, img/hero-m-720.webp 720w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
 <link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="font" type="font/woff2" href="fonts/bs-rdzen.woff2" crossorigin>
 <link rel="preload" as="font" type="font/woff2" href="fonts/is-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/bs-pl.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/is-pl.woff2" crossorigin>
 <style>
 @font-face{font-family:"Big Shoulders";font-weight:400 800;font-display:swap;src:url(fonts/bs-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026}
 @font-face{font-family:"Big Shoulders";font-weight:400 800;font-display:swap;src:url(fonts/bs-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
@@ -97,8 +99,10 @@ section{padding:clamp(76px,8vw,136px) 0}
 .pr p{font-size:16.5px;color:var(--s);margin-top:8px;max-width:30em}
 .ster{display:flex;align-items:center;gap:22px;margin-top:34px}
 .kropki{display:flex;gap:8px;flex-wrap:wrap}
-.kropki button{width:11px;height:11px;padding:0;border:1px solid var(--k);background:transparent;cursor:pointer;border-radius:0}
-.kropki button.on{background:var(--k)}
+.kropki{gap:0}
+.kropki button{width:24px;height:24px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.kropki button:before{content:"";width:11px;height:11px;border:1px solid var(--k);box-sizing:border-box}
+.kropki button.on:before{background:var(--k)}
 .nav{display:flex;gap:10px;margin-left:auto}
 .nav button{width:56px;height:56px;border:1px solid var(--l);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--k);transition:border-color .2s}
 .nav button:hover{border-color:var(--k)}
@@ -179,7 +183,7 @@ section{padding:clamp(76px,8vw,136px) 0}
 .form .ok{margin-top:18px;padding:14px 16px;background:#fff;border-left:3px solid var(--r);font-size:16px}
 
 /* stopka */
-.stopka{background:var(--g);padding:56px 0 30px;font-size:16px;color:var(--s)}
+.stopka{background:var(--g);padding:56px 0 30px;font-size:16px;color:#45484D}
 .stopka .g{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:30px 50px}
 .stopka .logo{color:var(--k)}
 .stopka h4{margin:0 0 12px;font-size:15px;font-weight:600;color:var(--t)}
@@ -276,7 +280,7 @@ section{padding:clamp(76px,8vw,136px) 0}
 <body>
 <header class="top" id="top">
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Szeszuła Architekci - strona główna"><b>SZESZUŁA</b><small>ARCHITEKCI</small></a>
+    <a class="logo" href="#"><b>SZESZUŁA</b><small>ARCHITEKCI</small></a>
     <nav class="menu" id="menu" aria-label="Menu główne">
       <a href="#projekty">Architektura</a>
       <a href="#proces">Jak pracujemy</a>
@@ -294,7 +298,7 @@ section{padding:clamp(76px,8vw,136px) 0}
 <main>
 <section class="hero" aria-label="Szeszuła Architekci">
   <picture>
-    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-800.webp 800w" sizes="100vw">
+    <source media="(max-width:760px)" srcset="img/hero-m-360.webp 360w, img/hero-m-540.webp 540w, img/hero-m-720.webp 720w" sizes="100vw">
     <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" sizes="100vw" width="1600" height="900" alt="Dom z cegły z ceglanym ażurem - projekt Szeszuła Architekci, dom na trójkątnej działce pod Poznaniem" fetchpriority="high" decoding="async">
   </picture>
   <div class="in">
@@ -341,8 +345,8 @@ section{padding:clamp(76px,8vw,136px) 0}
   <div class="wrap pk">
     <figure>
       <div class="duet">
-        <a class="s" href="img/las_rysu1-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - szkic koncepcyjny"><img src="img/las_rysu1-800.webp" width="665" height="900" alt="Odręczny szkic koncepcyjny rzutu i przekroju domu" loading="lazy" decoding="async"></a>
-        <a href="img/las-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - wizualizacja"><img src="img/las-800.webp" width="800" height="800" alt="Wizualizacja drewnianego domu pod lasem" loading="lazy" decoding="async"></a>
+        <a class="s" href="img/las_rysu1-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - szkic koncepcyjny"><img src="img/las_rysu1-800.webp" srcset="img/las_rysu1-400.webp 400w, img/las_rysu1-800.webp 665w" sizes="(max-width:980px) 42vw, 22vw" width="665" height="900" alt="Odręczny szkic koncepcyjny rzutu i przekroju domu" loading="lazy" decoding="async"></a>
+        <a href="img/las-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - wizualizacja"><img src="img/las-800.webp" srcset="img/las-400.webp 400w, img/las-800.webp 800w" sizes="(max-width:980px) 50vw, 28vw" width="800" height="800" alt="Wizualizacja drewnianego domu pod lasem" loading="lazy" decoding="async"></a>
       </div>
       <figcaption>Drewniany dom pod lasem: od odręcznego szkicu do wizualizacji.</figcaption>
     </figure>
@@ -373,17 +377,17 @@ section{padding:clamp(76px,8vw,136px) 0}
         </ul>
       </div>
       <figure>
-        <a href="img/pila2-1600.webp" data-lb="urb0" data-cap="„Zielone Wzgórza”, Piła - szkic koncepcyjny"><img src="img/pila2-800.webp" width="800" height="1166" alt="Odręczny szkic koncepcyjny układu nowej dzielnicy w Pile" loading="lazy" decoding="async"></a>
+        <a href="img/pila2-1600.webp" data-lb="urb0" data-cap="„Zielone Wzgórza”, Piła - szkic koncepcyjny"><img src="img/pila2-800.webp" srcset="img/pila2-480.webp 480w, img/pila2-800.webp 800w" sizes="(max-width:980px) 92vw, 560px" width="800" height="1166" alt="Odręczny szkic koncepcyjny układu nowej dzielnicy w Pile" loading="lazy" decoding="async"></a>
         <figcaption>„Zielone Wzgórza”, Piła - szkic koncepcyjny.</figcaption>
       </figure>
     </div>
     <div class="utor">
       <div class="tor" id="tor-urb">
-<a class="uk" href="img/u31-1600.webp" data-lb="urb" data-cap="Szczegółowa koncepcja urbanistyczno-architektoniczna"><img src="img/u31-800.webp" width="800" height="562" alt="Szczegółowa koncepcja urbanistyczno-architektoniczna" loading="lazy" decoding="async"><span>Szczegółowa koncepcja urbanistyczno-architektoniczna</span></a>
-<a class="uk" href="img/u2-1600.webp" data-lb="urb" data-cap="Koncepcja kwartału zabudowy, Nowe Podolany"><img src="img/u2-800.webp" width="800" height="528" alt="Koncepcja kwartału zabudowy, Nowe Podolany" loading="lazy" decoding="async"><span>Koncepcja kwartału zabudowy, Nowe Podolany</span></a>
-<a class="uk" href="img/u_osiedle-1600.webp" data-lb="urb" data-cap="Koncepcja osiedla zabudowy wielorodzinnej"><img src="img/u_osiedle-800.webp" width="800" height="450" alt="Koncepcja osiedla zabudowy wielorodzinnej" loading="lazy" decoding="async"><span>Koncepcja osiedla zabudowy wielorodzinnej</span></a>
-<a class="uk" href="img/pod2-1600.webp" data-lb="urb" data-cap="Nowe Podolany, 2007 - rysunki odręczne"><img src="img/pod2-800.webp" width="800" height="493" alt="Nowe Podolany, 2007 - rysunki odręczne" loading="lazy" decoding="async"><span>Nowe Podolany, 2007 - rysunki odręczne</span></a>
-<a class="uk" href="img/u1-1600.webp" data-lb="urb" data-cap="Wolne Tory - konkurs urbanistyczny"><img src="img/u1-800.webp" width="800" height="1087" alt="Wolne Tory - konkurs urbanistyczny" loading="lazy" decoding="async"><span>Wolne Tory - konkurs urbanistyczny</span></a>
+<a class="uk" href="img/u31-1600.webp" data-lb="urb" data-cap="Szczegółowa koncepcja urbanistyczno-architektoniczna"><img src="img/u31-800.webp" srcset="img/u31-400.webp 400w, img/u31-800.webp 800w" sizes="(max-width:760px) 330px, 460px" width="800" height="562" alt="Szczegółowa koncepcja urbanistyczno-architektoniczna" loading="lazy" decoding="async"><span>Szczegółowa koncepcja urbanistyczno-architektoniczna</span></a>
+<a class="uk" href="img/u2-1600.webp" data-lb="urb" data-cap="Koncepcja kwartału zabudowy, Nowe Podolany"><img src="img/u2-800.webp" srcset="img/u2-400.webp 400w, img/u2-800.webp 800w" sizes="(max-width:760px) 330px, 460px" width="800" height="528" alt="Koncepcja kwartału zabudowy, Nowe Podolany" loading="lazy" decoding="async"><span>Koncepcja kwartału zabudowy, Nowe Podolany</span></a>
+<a class="uk" href="img/u_osiedle-1600.webp" data-lb="urb" data-cap="Koncepcja osiedla zabudowy wielorodzinnej"><img src="img/u_osiedle-800.webp" srcset="img/u_osiedle-400.webp 400w, img/u_osiedle-800.webp 800w" sizes="(max-width:760px) 330px, 460px" width="800" height="450" alt="Koncepcja osiedla zabudowy wielorodzinnej" loading="lazy" decoding="async"><span>Koncepcja osiedla zabudowy wielorodzinnej</span></a>
+<a class="uk" href="img/pod2-1600.webp" data-lb="urb" data-cap="Nowe Podolany, 2007 - rysunki odręczne"><img src="img/pod2-800.webp" srcset="img/pod2-400.webp 400w, img/pod2-800.webp 800w" sizes="(max-width:760px) 330px, 460px" width="800" height="493" alt="Nowe Podolany, 2007 - rysunki odręczne" loading="lazy" decoding="async"><span>Nowe Podolany, 2007 - rysunki odręczne</span></a>
+<a class="uk" href="img/u1-1600.webp" data-lb="urb" data-cap="Wolne Tory - konkurs urbanistyczny"><img src="img/u1-800.webp" srcset="img/u1-400.webp 400w, img/u1-800.webp 800w" sizes="(max-width:760px) 330px, 460px" width="800" height="1087" alt="Wolne Tory - konkurs urbanistyczny" loading="lazy" decoding="async"><span>Wolne Tory - konkurs urbanistyczny</span></a>
       </div>
       <div class="ster">
         <div class="kropki" data-kropki="tor-urb" hidden></div>
@@ -405,12 +409,12 @@ section{padding:clamp(76px,8vw,136px) 0}
       </div>
     </div>
     <div class="wg">
-<a class="wk wk0" href="img/w5-1600.webp" data-lb="wn" data-cap="Dom w Puszczykowie"><img src="img/w5-800.webp" width="800" height="450" alt="Dom w Puszczykowie" loading="lazy" decoding="async"><span>Dom w Puszczykowie</span></a>
-<a class="wk wk1" href="img/w_kanc-1600.webp" data-lb="wn" data-cap="Kancelaria i kawalerka w kamienicy, Stare Miasto"><img src="img/w_kanc-800.webp" width="800" height="533" alt="Kancelaria i kawalerka w kamienicy, Stare Miasto" loading="lazy" decoding="async"><span>Kancelaria i kawalerka w kamienicy, Stare Miasto</span></a>
-<a class="wk wk2" href="img/w_bukowska-1600.webp" data-lb="wn" data-cap="Mieszkanie na osiedlu Wille Bukowska"><img src="img/w_bukowska-800.webp" width="800" height="533" alt="Mieszkanie na osiedlu Wille Bukowska" loading="lazy" decoding="async"><span>Mieszkanie na osiedlu Wille Bukowska</span></a>
-<a class="wk wk3" href="img/w_dom-1600.webp" data-lb="wn" data-cap="Dom jednorodzinny nad jeziorem - realizacja"><img src="img/w_dom-800.webp" width="800" height="583" alt="Dom jednorodzinny nad jeziorem - realizacja" loading="lazy" decoding="async"><span>Dom jednorodzinny nad jeziorem - realizacja</span></a>
-<a class="wk wk4" href="img/w_laz-1600.webp" data-lb="wn" data-cap="Projekt łazienki z wolnostojącą wanną"><img src="img/w_laz-800.webp" width="800" height="593" alt="Projekt łazienki z wolnostojącą wanną" loading="lazy" decoding="async"><span>Projekt łazienki z wolnostojącą wanną</span></a>
-<a class="wk wk5" href="img/w_syp1-1600.webp" data-lb="wn" data-cap="Projekt sypialni"><img src="img/w_syp1-800.webp" width="800" height="445" alt="Projekt sypialni" loading="lazy" decoding="async"><span>Projekt sypialni</span></a>
+<a class="wk wk0" href="img/w5-1600.webp" data-lb="wn" data-cap="Dom w Puszczykowie"><img src="img/w5-800.webp" srcset="img/w5-800.webp 800w, img/w5-1600.webp 1600w" sizes="(max-width:760px) 92vw, 62vw" width="800" height="450" alt="Dom w Puszczykowie" loading="lazy" decoding="async"><span>Dom w Puszczykowie</span></a>
+<a class="wk wk1" href="img/w_kanc-1600.webp" data-lb="wn" data-cap="Kancelaria i kawalerka w kamienicy, Stare Miasto"><img src="img/w_kanc-800.webp" srcset="img/w_kanc-400.webp 400w, img/w_kanc-800.webp 800w" sizes="(max-width:760px) 46vw, 31vw" width="800" height="533" alt="Kancelaria i kawalerka w kamienicy, Stare Miasto" loading="lazy" decoding="async"><span>Kancelaria i kawalerka w kamienicy, Stare Miasto</span></a>
+<a class="wk wk2" href="img/w_bukowska-1600.webp" data-lb="wn" data-cap="Mieszkanie na osiedlu Wille Bukowska"><img src="img/w_bukowska-800.webp" srcset="img/w_bukowska-400.webp 400w, img/w_bukowska-800.webp 800w" sizes="(max-width:760px) 46vw, 31vw" width="800" height="533" alt="Mieszkanie na osiedlu Wille Bukowska" loading="lazy" decoding="async"><span>Mieszkanie na osiedlu Wille Bukowska</span></a>
+<a class="wk wk3" href="img/w_dom-1600.webp" data-lb="wn" data-cap="Dom jednorodzinny nad jeziorem - realizacja"><img src="img/w_dom-800.webp" srcset="img/w_dom-400.webp 400w, img/w_dom-800.webp 800w" sizes="(max-width:760px) 46vw, 31vw" width="800" height="583" alt="Dom jednorodzinny nad jeziorem - realizacja" loading="lazy" decoding="async"><span>Dom jednorodzinny nad jeziorem - realizacja</span></a>
+<a class="wk wk4" href="img/w_laz-1600.webp" data-lb="wn" data-cap="Projekt łazienki z wolnostojącą wanną"><img src="img/w_laz-800.webp" srcset="img/w_laz-400.webp 400w, img/w_laz-800.webp 800w" sizes="(max-width:760px) 46vw, 31vw" width="800" height="593" alt="Projekt łazienki z wolnostojącą wanną" loading="lazy" decoding="async"><span>Projekt łazienki z wolnostojącą wanną</span></a>
+<a class="wk wk5" href="img/w_syp1-1600.webp" data-lb="wn" data-cap="Projekt sypialni"><img src="img/w_syp1-800.webp" srcset="img/w_syp1-400.webp 400w, img/w_syp1-800.webp 800w" sizes="(max-width:760px) 46vw, 31vw" width="800" height="445" alt="Projekt sypialni" loading="lazy" decoding="async"><span>Projekt sypialni</span></a>
     </div>
     <div class="wnote">
       <p><b>Kancelaria i kawalerka, Stare Miasto.</b> Podział wnętrza XIX-wiecznej kamienicy na dwa lokale. Zachowaliśmy drewniane posadzki, odkryliśmy cegłę i wyeksponowaliśmy masywne nadproża.</p>
@@ -422,7 +426,7 @@ section{padding:clamp(76px,8vw,136px) 0}
 <section class="sz" id="pracownia">
   <div class="wrap om">
     <figure>
-      <div class="ph"><img src="img/szeszula-800.webp" width="800" height="1113" alt="dr inż. arch. Waldemar Szeszuła" loading="lazy" decoding="async"></div>
+      <div class="ph"><img src="img/szeszula-800.webp" srcset="img/szeszula-480.webp 480w, img/szeszula-800.webp 800w" sizes="(max-width:980px) 340px, 420px" width="800" height="1113" alt="dr inż. arch. Waldemar Szeszuła" loading="lazy" decoding="async"></div>
       <figcaption>dr inż. arch. Waldemar Szeszuła</figcaption>
     </figure>
     <div class="tx">

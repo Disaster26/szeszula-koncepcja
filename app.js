@@ -1,6 +1,6 @@
 (function(){
   var top=document.getElementById('top'),bg=document.getElementById('burger');
-  function sc(){top.classList.toggle('sc',window.scrollY>8)}
+  var sct=0;function sc(){if(sct)return;sct=requestAnimationFrame(function(){sct=0;top.classList.toggle("sc",window.scrollY>8)})}
   window.addEventListener('scroll',sc,{passive:true});sc();
   function zamknij(){top.classList.remove('open');bg.setAttribute('aria-expanded','false');bg.setAttribute('aria-label','Otwórz menu')}
   bg.addEventListener('click',function(){var o=top.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Zamknij menu':'Otwórz menu')});
@@ -32,7 +32,7 @@
       var n=tor.children.length,bs=[];
       for(var i=0;i<n;i++){(function(i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Projekt '+(i+1));b.addEventListener('click',function(){tor.scrollTo({left:tor.children[i].offsetLeft-tor.firstElementChild.offsetLeft,behavior:'smooth'})});kr.appendChild(b);bs.push(b)})(i)}
       function upd(){var i=Math.round(tor.scrollLeft/krok());if(tor.scrollLeft+tor.clientWidth>=tor.scrollWidth-4)i=n-1;bs.forEach(function(b,j){b.classList.toggle('on',j===i)})}
-      tor.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});upd();
+      tor.addEventListener('scroll',function(){requestAnimationFrame(upd)},{passive:true});requestAnimationFrame(upd);
     }
   });
 
