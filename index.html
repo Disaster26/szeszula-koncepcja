@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Szeszuła Architekci - pracownia architektoniczna Poznań</title>
+<meta name="description" content="Szeszuła Architekci - pracownia architektury, urbanistyki i wnętrz w Poznaniu. Domy, rezydencje, zabudowa wielorodzinna i koncepcje urbanistyczne, od warunków zabudowy po nadzór nad budową.">
+<meta name="theme-color" content="#111111">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-m-640.webp" imagesrcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-800.webp 800w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<link rel="preload" as="font" type="font/woff2" href="fonts/bs-rdzen.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/is-rdzen.woff2" crossorigin>
+<style>
+@font-face{font-family:"Big Shoulders";font-weight:400 800;font-display:swap;src:url(fonts/bs-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026}
+@font-face{font-family:"Big Shoulders";font-weight:400 800;font-display:swap;src:url(fonts/bs-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Instrument Sans";font-weight:400 600;font-display:swap;src:url(fonts/is-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026}
+@font-face{font-family:"Instrument Sans";font-weight:400 600;font-display:swap;src:url(fonts/is-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--k:#111111;--t:#1A1B1D;--s:#5A5D63;--r:#D3281B;--g:#F1F2F4;--l:#DADCE0;--d:#0A0A0A;--hh:76px;--gut:clamp(16px,3.6vw,64px);--w:1480px;
+/* motyw: odreczna kreska olowka - jak litery logo i szkice koncepcyjne pracowni */
+--kreska:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 14'%3E%3Cpath d='M2 9.5C20 6.8 37 8.6 55 7.1S92 4.9 112 6.2c9 .6 17 1.6 26 .4' fill='none' stroke='%23D3281B' stroke-width='2.6' stroke-linecap='round'/%3E%3Cpath d='M9 11.6c22-2.2 47-1.4 70-2.6 15-.8 30-1.9 44-1.1' fill='none' stroke='%23D3281B' stroke-width='1.2' stroke-linecap='round' opacity='.55'/%3E%3C/svg%3E")}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--hh);-webkit-text-size-adjust:100%}
+body{margin:0;font-family:"Instrument Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;font-size:18px;line-height:1.65;color:var(--t);background:#fff;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:700;line-height:1;letter-spacing:.005em}
+h1{font-size:clamp(48px,min(5.4vw,10.5vh),116px)}
+h2{font-size:clamp(42px,4.4vw,76px)}
+h3{font-size:28px;line-height:1.05;font-weight:600}
+p{margin:0}
+.wrap{width:min(var(--w),100% - 2*var(--gut));margin-inline:auto}
+.k:after{content:"";display:block;width:140px;height:14px;margin-top:20px;background:var(--kreska) no-repeat 0 0/100% 100%}
+.btn{display:inline-flex;align-items:center;gap:16px;background:var(--k);color:#fff;font-family:inherit;font-weight:600;font-size:18px;line-height:1.2;text-decoration:none;padding:19px 30px;border:0;border-radius:0;cursor:pointer;position:relative;transition:background .2s}
+.btn:after{content:"";position:absolute;left:30px;right:30px;bottom:11px;height:2px;background:var(--r);transform:scaleX(0);transform-origin:0 50%;transition:transform .3s cubic-bezier(.2,.7,.3,1)}
+.btn:hover:after,.btn:focus-visible:after{transform:none}
+.btn svg{width:18px;height:10px}
+.btn.w{background:#fff;color:var(--k)}
+
+/* naglowek */
+.top{position:sticky;top:0;z-index:50;height:var(--hh);background:#fff;transition:box-shadow .2s}
+.top.sc{box-shadow:0 1px 0 var(--l),0 8px 26px rgba(0,0,0,.05)}
+.top .wrap{height:100%;display:flex;align-items:center;gap:30px}
+.logo{display:flex;flex-direction:column;align-items:flex-start;text-decoration:none;color:var(--k);line-height:1}
+.logo b{font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:800;font-size:33px;letter-spacing:.015em;line-height:.86;transform:scaleY(1.12);transform-origin:0 100%}
+.logo small{font-size:10.5px;font-weight:600;letter-spacing:.3em;margin-top:5px}
+.menu{display:flex;gap:2px;margin-left:auto}
+.menu a{text-decoration:none;font-weight:500;font-size:17px;padding:10px 13px;position:relative}
+.menu a:after{content:"";position:absolute;left:13px;right:13px;bottom:2px;height:8px;background:var(--kreska) no-repeat 0 50%/100% 100%;clip-path:inset(0 100% 0 0);transition:clip-path .35s cubic-bezier(.2,.7,.3,1)}
+.menu a:hover:after,.menu a.on:after{clip-path:inset(0 0 0 0)}
+.top .tel{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:17px;white-space:nowrap;color:#fff;background:var(--k);padding:12px 18px}
+.top .tel:hover{background:#2b2c2f}
+.top .tel svg,.mtel svg{width:16px;height:16px;flex:none}
+.burger{display:none;margin-left:auto;width:48px;height:48px;border:1px solid var(--l);background:#fff;cursor:pointer;padding:0;align-items:center;justify-content:center}
+.burger i{display:block;width:20px;height:2px;background:var(--k);position:relative;transition:background .2s}
+.burger i:before,.burger i:after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--k);transition:transform .25s}
+.burger i:before{top:-6px}.burger i:after{top:6px}
+.top.open .burger i{background:transparent}
+.top.open .burger i:before{transform:translateY(6px) rotate(45deg)}
+.top.open .burger i:after{transform:translateY(-6px) rotate(-45deg)}
+.menu .mtel{display:none}
+
+section{padding:clamp(76px,8vw,136px) 0}
+/* pierwszy ekran: zdjecie na spad, cienka biala rama jak passe-partout z obecnej strony */
+.hero{padding:0;position:relative;min-height:calc(100svh - var(--hh));display:flex;color:#fff;background:#4a463f;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:50% 62%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.74) 0%,rgba(8,8,8,.5) 30%,rgba(8,8,8,.08) 58%,rgba(8,8,8,0) 70%),linear-gradient(0deg,rgba(8,8,8,.5),rgba(8,8,8,0) 42%)}
+.hero:before{content:"";position:absolute;z-index:2;inset:clamp(10px,1.4vw,22px);border:1px solid rgba(255,255,255,.55);pointer-events:none}
+.hero .in{position:relative;z-index:3;width:min(var(--w),100% - 2*var(--gut));margin:auto auto 0;padding:48px 0 clamp(48px,8vh,96px)}
+.hero h1{max-width:17ch}
+.hero .lead{font-size:clamp(18px,1.3vw,22px);line-height:1.55;max-width:31em;margin-top:24px;color:rgba(255,255,255,.93)}
+.hero .btn{margin-top:34px}
+.hero .gdzie{margin-top:26px;font-size:15.5px;color:rgba(255,255,255,.82)}
+.hero .gdzie a{text-decoration:none;font-weight:600;color:#fff}
+
+/* sekcje */
+.sz{background:var(--g)}
+.hd{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 56px;margin-bottom:clamp(36px,4vw,64px)}
+.hd .tx{max-width:46em}
+.hd p{color:var(--s);font-size:19px;margin-top:22px;max-width:40em}
+
+/* projekty - karuzela w kontenerze */
+.tor{display:flex;gap:clamp(16px,1.6vw,26px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;overscroll-behavior-x:contain}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{cursor:grabbing;scroll-snap-type:none}
+.tor.drag a{pointer-events:none}
+.pr{flex:0 0 calc((100% - 2*clamp(16px,1.6vw,26px))/3);scroll-snap-align:start;margin:0;user-select:none}
+.pr .f{display:block;position:relative;aspect-ratio:4/3;overflow:hidden;background:#e4e5e7}
+.pr img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.pr .f:hover img{transform:scale(1.035)}
+.pr .f:before{content:"";position:absolute;z-index:1;inset:12px;border:1px solid rgba(255,255,255,.7);opacity:0;transition:opacity .3s}
+.pr .f:hover:before{opacity:1}
+.pr figcaption{padding:20px 2px 0;border-top:0}
+.pr h3{font-size:30px}
+.pr p{font-size:16.5px;color:var(--s);margin-top:8px;max-width:30em}
+.ster{display:flex;align-items:center;gap:22px;margin-top:34px}
+.kropki{display:flex;gap:8px;flex-wrap:wrap}
+.kropki button{width:11px;height:11px;padding:0;border:1px solid var(--k);background:transparent;cursor:pointer;border-radius:0}
+.kropki button.on{background:var(--k)}
+.nav{display:flex;gap:10px;margin-left:auto}
+.nav button{width:56px;height:56px;border:1px solid var(--l);background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--k);transition:border-color .2s}
+.nav button:hover{border-color:var(--k)}
+.nav svg{width:22px;height:12px}
+.dk .nav button{background:transparent;border-color:rgba(255,255,255,.28);color:#fff}
+.dk .nav button:hover{border-color:#fff}
+
+/* od kreski do projektu */
+.pk{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(40px,6vw,120px);align-items:center}
+.duet{display:grid;grid-template-columns:665fr 900fr;gap:3px;background:#fff;padding:3px}
+.duet a{display:block;overflow:hidden;background:#fff}
+.duet img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+.duet .s img{object-fit:contain;background:#fff}
+.pk figure{margin:0}
+.pk figcaption{font-size:15px;color:var(--s);margin-top:14px}
+.etapy{list-style:none;margin:34px 0 0;padding:0;border-top:1px solid var(--k)}
+.etapy li{padding:20px 0 20px 0;border-bottom:1px solid var(--l);display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:6px 30px}
+.etapy b{font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:600;font-size:25px;line-height:1.1}
+.etapy span{color:var(--s);font-size:16.5px}
+.cyt{margin-top:30px;font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:600;font-size:clamp(28px,2.4vw,38px);line-height:1.1}
+
+/* urbanistyka - jedna mocna ciemna sekcja */
+.dk{background:var(--d);color:#fff}
+.dk .hd p,.dk .tx p{color:rgba(255,255,255,.76)}
+.ub{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,6vw,120px);align-items:center}
+.ub figure{margin:0;justify-self:center;max-width:560px;width:100%}
+.ub figure a{display:block}
+.ub figcaption{font-size:15px;color:rgba(255,255,255,.6);margin-top:12px}
+.ub .tx p{font-size:19px;margin-top:22px;max-width:36em}
+.lista{list-style:none;margin:32px 0 0;padding:0;border-top:1px solid rgba(255,255,255,.3)}
+.lista li{padding:13px 0 13px 30px;border-bottom:1px solid rgba(255,255,255,.12);position:relative;font-size:17px;color:rgba(255,255,255,.88)}
+.lista li:before{content:"";position:absolute;left:0;top:23px;width:18px;height:6px;background:var(--kreska) no-repeat 0 50%/100% 100%}
+.utor{margin-top:clamp(56px,6vw,96px)}
+.uk{flex:0 0 auto;height:clamp(220px,20vw,320px);display:block;position:relative;scroll-snap-align:start;overflow:hidden;background:#1b1b1b}
+.uk img{height:100%;width:auto;max-width:none;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.uk:hover img{transform:scale(1.03)}
+.uk span{display:block;position:absolute;left:0;right:0;bottom:0;padding:30px 16px 12px;font-size:14.5px;line-height:1.35;background:linear-gradient(0deg,rgba(0,0,0,.78),rgba(0,0,0,0));color:#fff}
+
+/* wnetrza */
+.wg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:clamp(200px,17vw,330px);gap:clamp(10px,1vw,16px)}
+.wk{display:block;position:relative;overflow:hidden;background:#e4e5e7}
+.wk img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.3,1)}
+.wk:hover img{transform:scale(1.035)}
+.wk span{position:absolute;left:0;right:0;bottom:0;padding:34px 16px 13px;font-size:14.5px;line-height:1.35;color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.66),rgba(0,0,0,0));opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s}
+.wk:hover span,.wk:focus-visible span{opacity:1;transform:none}
+.wk0{grid-column:span 2;grid-row:span 2}
+.wnote{margin-top:34px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px clamp(40px,6vw,120px);color:var(--s);font-size:17px}
+.wnote b{color:var(--t);font-weight:600}
+
+/* pracownia */
+.om{display:grid;grid-template-columns:minmax(0,.62fr) minmax(0,1.38fr);gap:clamp(40px,6vw,120px);align-items:center}
+.om figure{margin:0;max-width:420px;width:100%;justify-self:center;position:relative}
+.om figure img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 20%;filter:grayscale(1)}
+.om .ph{position:relative}.om .ph:before{content:"";position:absolute;z-index:1;inset:14px;border:1px solid rgba(255,255,255,.6);pointer-events:none}
+.om figcaption{font-size:15px;color:var(--s);margin-top:12px}
+.om .tx p{margin-top:20px;color:var(--s);max-width:40em}
+.om .tx p.mocny{color:var(--t);font-size:clamp(20px,1.5vw,24px);line-height:1.5}
+.soc{margin-top:28px;display:flex;gap:26px;font-weight:600;font-size:17px}
+.soc a{text-decoration:none;border-bottom:1px solid var(--k);padding-bottom:2px}
+
+/* kontakt */
+.kt{display:grid;grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);gap:clamp(40px,6vw,110px);align-items:start}
+.dane .tl{display:inline-block;margin-top:30px;font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:700;font-size:clamp(40px,3.6vw,58px);text-decoration:none;line-height:1}
+.dane dl{margin:28px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px 26px;font-size:17px;border-top:1px solid var(--l);padding-top:24px}
+.dane dt{color:var(--s)}
+.dane dd{margin:0;font-weight:500}
+.dane dd a{text-decoration:none}
+.mapa{position:relative;margin-top:30px;height:300px;background:#e2e4e8;overflow:hidden}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1)}
+.form{background:var(--g);padding:clamp(26px,3vw,48px)}
+.form h3{font-size:34px}
+.form p.i{color:var(--s);font-size:16px;margin-top:10px}
+.form label{display:block;font-size:15px;font-weight:600;margin-top:20px}
+.form input,.form textarea{display:block;width:100%;margin-top:8px;font:inherit;font-size:17px;padding:14px 16px;border:1px solid #c9ccd1;border-radius:0;background:#fff;color:var(--t)}
+.form input:focus,.form textarea:focus{outline:2px solid var(--k);outline-offset:-1px}
+.form textarea{min-height:130px;resize:vertical}
+.form .btn{margin-top:26px}
+.form .ok{margin-top:18px;padding:14px 16px;background:#fff;border-left:3px solid var(--r);font-size:16px}
+
+/* stopka */
+.stopka{background:var(--g);padding:56px 0 30px;font-size:16px;color:var(--s)}
+.stopka .g{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);gap:30px 50px}
+.stopka .logo{color:var(--k)}
+.stopka h4{margin:0 0 12px;font-size:15px;font-weight:600;color:var(--t)}
+.stopka ul{list-style:none;margin:0;padding:0}
+.stopka li{margin:5px 0;overflow-wrap:anywhere}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:var(--k)}
+.stopka .kpo{margin-top:18px;font-size:13.5px;line-height:1.5;max-width:44em}
+.stopka .dol{margin-top:38px;padding-top:20px;border-top:1px solid var(--l);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;font-size:14.5px}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+/* pasek telefonu na telefonie */
+.mob{display:none}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(10,10,10,.95);display:none;align-items:center;justify-content:center;touch-action:pan-y}
+.lb.on{display:flex}
+.lb figure{margin:0;max-width:min(92vw,1600px);text-align:center}
+.lb img{max-width:100%;max-height:82vh;width:auto;height:auto;margin:auto;user-select:none}
+.lb figcaption{color:rgba(255,255,255,.85);font-size:15.5px;margin-top:14px}
+.lb button{position:absolute;background:transparent;border:1px solid rgba(255,255,255,.35);color:#fff;width:54px;height:54px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb button:hover{border-color:#fff}
+.lb .x{top:16px;right:16px}
+.lb .pv{left:16px;top:50%;margin-top:-27px}
+.lb .nx{right:16px;top:50%;margin-top:-27px}
+.lb svg{width:22px;height:14px}
+
+@media (max-width:1180px){
+  .menu a{padding:10px 9px;font-size:16px}
+  .menu a:after{left:9px;right:9px}
+  .pr{flex-basis:calc((100% - clamp(16px,1.6vw,26px))/2)}
+}
+@media (max-width:980px){
+  :root{--hh:66px}
+  .burger{display:flex}
+  .top .tel{display:none}
+  .menu{position:fixed;top:var(--hh);left:0;right:0;bottom:0;background:#fff;flex-direction:column;gap:0;padding:12px var(--gut) 30px;transform:translateY(-8px);opacity:0;visibility:hidden;transition:opacity .2s,transform .2s,visibility .2s;overflow:auto;margin:0}
+  .top.open .menu{opacity:1;visibility:visible;transform:none}
+  .menu a{font-family:"Big Shoulders","Arial Narrow",sans-serif;font-weight:600;font-size:32px;padding:14px 0;border-bottom:1px solid var(--l)}
+  .menu a:after{left:0;right:auto;width:110px;bottom:6px}
+  .menu .mtel{display:flex;align-items:center;gap:12px;margin-top:24px;border:0;background:var(--k);color:#fff;font-family:"Instrument Sans",sans-serif;font-size:19px;padding:17px 20px;justify-content:center}
+  .menu .mtel:after{display:none}
+  .pk,.ub,.om,.kt{grid-template-columns:minmax(0,1fr)}
+  .ub figure{max-width:440px}
+  .om figure{max-width:340px;justify-self:start}
+  .wnote{grid-template-columns:minmax(0,1fr)}
+  .stopka .g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .stopka .g>div:first-child{grid-column:1/-1}
+}
+@media (max-width:760px){
+  body{font-size:17px}
+  .logo b{font-size:29px}
+  .logo small{font-size:9.5px}
+  .hero{min-height:calc(100svh - var(--hh))}
+  .hero picture img{object-position:50% 50%}
+  .hero:after{background:linear-gradient(0deg,rgba(8,8,8,.88) 0%,rgba(8,8,8,.72) 45%,rgba(8,8,8,.42) 72%,rgba(8,8,8,.12) 88%,rgba(8,8,8,0) 97%)}
+  .hero .in{padding:40px 0 38px}
+  .hero h1{font-size:clamp(46px,12.6vw,58px);max-width:11ch}
+  .hero .lead{font-size:17px;margin-top:18px}
+  .hero .btn{margin-top:26px;width:100%;justify-content:space-between}
+  .hero .gdzie{margin-top:18px;font-size:14.5px}
+  .hd p{font-size:17.5px}
+  .pr{flex-basis:84%}
+  .pr h3{font-size:27px}
+  .nav{display:none}
+  .etapy li{grid-template-columns:minmax(0,1fr)}
+  .uk{height:200px}
+  .wg{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px}
+  .wk0{grid-column:span 2;grid-row:span 2}
+  .wk span{opacity:1;transform:none;font-size:13px;padding:24px 10px 9px}
+  .dane dl{grid-template-columns:minmax(0,1fr);gap:2px}
+  .dane dd{margin-bottom:12px}
+  .mob{display:flex;position:fixed;z-index:40;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:#fff;box-shadow:0 -1px 0 var(--l),0 -10px 24px rgba(0,0,0,.06);transform:translateY(110%);transition:transform .3s}
+  .mob.widac{transform:none}
+  .mob a{flex:1;display:flex;align-items:center;justify-content:center;gap:10px;background:var(--k);color:#fff;text-decoration:none;font-weight:600;font-size:17px;padding:14px}
+  .mob svg{width:16px;height:16px}
+  .stopka{padding-bottom:96px}
+  .lb .pv,.lb .nx{top:auto;bottom:18px;margin:0}
+  .lb .pv{left:calc(50% - 64px)}.lb .nx{right:calc(50% - 64px)}
+}
+@media (min-width:1900px){:root{--w:1720px}body{font-size:19px}.hero .lead{font-size:23px}.hd p,.ub .tx p{font-size:21px}.pr p,.etapy span{font-size:17.5px}.btn{font-size:19px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Szeszuła Architekci - strona główna"><b>SZESZUŁA</b><small>ARCHITEKCI</small></a>
+    <nav class="menu" id="menu" aria-label="Menu główne">
+      <a href="#projekty">Architektura</a>
+      <a href="#proces">Jak pracujemy</a>
+      <a href="#urbanistyka">Urbanistyka</a>
+      <a href="#wnetrza">Wnętrza</a>
+      <a href="#pracownia">Pracownia</a>
+      <a href="#kontakt">Kontakt</a>
+      <a class="mtel" href="tel:+48666664661"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 1.6 6.3 4.4 5 6.2c.8 1.8 2.2 3.3 4 4.1l1.8-1.3 2.8 2.1-1 2.5C7.2 13.6 2.4 8.8 1.7 3.4z"/></svg>+48 666 664 661</a>
+    </nav>
+    <a class="tel" href="tel:+48666664661"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 1.6 6.3 4.4 5 6.2c.8 1.8 2.2 3.3 4 4.1l1.8-1.3 2.8 2.1-1 2.5C7.2 13.6 2.4 8.8 1.7 3.4z"/></svg>666 664 661</a>
+    <button class="burger" id="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="menu"><i></i></button>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-label="Szeszuła Architekci">
+  <picture>
+    <source media="(max-width:760px)" srcset="img/hero-m-480.webp 480w, img/hero-m-640.webp 640w, img/hero-m-800.webp 800w" sizes="100vw">
+    <img src="img/hero-1600.webp" srcset="img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" sizes="100vw" width="1600" height="900" alt="Dom z cegły z ceglanym ażurem - projekt Szeszuła Architekci, dom na trójkątnej działce pod Poznaniem" fetchpriority="high" decoding="async">
+  </picture>
+  <div class="in">
+    <h1>Projektujemy, aż&nbsp;usłyszymy: to&nbsp;jest dokładnie&nbsp;to</h1>
+    <p class="lead">Szeszuła Architekci - pracownia architektury, urbanistyki i wnętrz w Poznaniu. Domy, rezydencje, zabudowa wielorodzinna i koncepcje urbanistyczne, od warunków zabudowy po nadzór nad budową.</p>
+    <a class="btn w" href="#projekty">Zobacz projekty <svg viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></a>
+    <p class="gdzie">ul. Jana Matejki 48/49, Poznań - <a href="tel:+48666664661">+48 666 664 661</a></p>
+  </div>
+</section>
+
+<section id="projekty">
+  <div class="wrap">
+    <div class="hd">
+      <div class="tx">
+        <h2 class="k">Każda działka to inny dom</h2>
+        <p>Skarpa, łąka, działka trójkątna albo podłużna, sąsiedztwo dwóch ulic - od tego zaczynamy. Nie narzucamy własnej stylistyki: dom ma być przede wszystkim domem inwestorów, najlepszym funkcjonalnie, technologicznie i kosztowo.</p>
+      </div>
+    </div>
+    <div class="tor" id="tor-proj">
+<figure class="pr"><a class="f" href="img/p-osada-full.webp" data-lb="proj" data-cap="Osada nad rozlewiskiem" aria-label="Powiększ: Osada nad rozlewiskiem"><img src="img/p-osada-600.webp" srcset="img/p-osada-600.webp 600w, img/p-osada-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Osada nad rozlewiskiem - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Osada nad rozlewiskiem</h3><p>Dom i budynek gospodarczy z palonej deski Shou Sugi Ban, na skarpie przy ujściu Samy do Warty.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-skarpa-full.webp" data-lb="proj" data-cap="Dom na skarpie" aria-label="Powiększ: Dom na skarpie"><img src="img/p-skarpa-600.webp" srcset="img/p-skarpa-600.webp 600w, img/p-skarpa-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom na skarpie - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom na skarpie</h3><p>Wkomponowany w drzewostan na szczycie zielonej skarpy, otwarty szeroko na panoramę okolicy.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-laka-full.webp" data-lb="proj" data-cap="Dom na łące" aria-label="Powiększ: Dom na łące"><img src="img/p-laka-600.webp" srcset="img/p-laka-600.webp 600w, img/p-laka-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom na łące - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom na łące</h3><p>Cegła rozbiórkowa ze starej stodoły i jak najmniejsza ingerencja w naturalny ogród.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-dowew-full.webp" data-lb="proj" data-cap="Dom do wewnątrz" aria-label="Powiększ: Dom do wewnątrz"><img src="img/p-dowew-600.webp" srcset="img/p-dowew-600.webp 600w, img/p-dowew-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom do wewnątrz - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom do wewnątrz</h3><p>Zamknięty od strony dwóch ulic, w całości zwrócony do prywatnego ogrodu.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-rezm-full.webp" data-lb="proj" data-cap="Rezydencja miejska" aria-label="Powiększ: Rezydencja miejska"><img src="img/p-rezm-600.webp" srcset="img/p-rezm-600.webp 600w, img/p-rezm-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Rezydencja miejska - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Rezydencja miejska</h3><p>Willa na trzech poziomach działki ze spadkiem, z kaskadą tarasów i zielonym patio.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-podl-full.webp" data-lb="proj" data-cap="Dom na podłużnej działce" aria-label="Powiększ: Dom na podłużnej działce"><img src="img/p-podl-600.webp" srcset="img/p-podl-600.webp 600w, img/p-podl-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom na podłużnej działce - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom na podłużnej działce</h3><p>Ceramiczny parter osadzony w krajobrazie unosi lżejszą, białą bryłę piętra.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-las-full.webp" data-lb="proj" data-cap="Drewniany dom pod lasem" aria-label="Powiększ: Drewniany dom pod lasem"><img src="img/p-las-600.webp" srcset="img/p-las-600.webp 600w, img/p-las-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Drewniany dom pod lasem - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Drewniany dom pod lasem</h3><p>Wkomponowany w istniejącą zieleń. Projekt i pozwolenie na budowę: 2022-2023.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-energ26-full.webp" data-lb="proj" data-cap="Dom energooszczędny" aria-label="Powiększ: Dom energooszczędny"><img src="img/p-energ26-600.webp" srcset="img/p-energ26-600.webp 600w, img/p-energ26-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom energooszczędny - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom energooszczędny</h3><p>Prefabrykacja i dwa zielone dziedzińce, które wpuszczają słońce od rana do wieczora.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-jezioro-full.webp" data-lb="proj" data-cap="Dom z widokiem na jezioro" aria-label="Powiększ: Dom z widokiem na jezioro"><img src="img/p-jezioro-600.webp" srcset="img/p-jezioro-600.webp 600w, img/p-jezioro-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom z widokiem na jezioro - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom z widokiem na jezioro</h3><p>Antresola, dziedziniec od frontu i ceglana elewacja, która wpisuje dom w krajobraz.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-brylowy-full.webp" data-lb="proj" data-cap="Dom Bryłowy" aria-label="Powiększ: Dom Bryłowy"><img src="img/p-brylowy-600.webp" srcset="img/p-brylowy-600.webp 600w, img/p-brylowy-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom Bryłowy - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom Bryłowy</h3><p>Trzy zestawione bryły: przymknięte od ulicy, szeroko otwarte na ogród i ścianę lasu.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-kacik-full.webp" data-lb="proj" data-cap="Kącik" aria-label="Powiększ: Kącik"><img src="img/p-kacik-600.webp" srcset="img/p-kacik-600.webp 600w, img/p-kacik-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Kącik - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Kącik</h3><p>Kamienica uzupełniająca puste miejsce w pierzei łazarskiej ulicy Kącik.</p></figcaption></figure>
+<figure class="pr"><a class="f" href="img/p-klas-full.webp" data-lb="proj" data-cap="Dom klasyczny" aria-label="Powiększ: Dom klasyczny"><img src="img/p-klas-600.webp" srcset="img/p-klas-600.webp 600w, img/p-klas-900.webp 900w" sizes="(max-width:760px) 84vw, 420px" width="600" height="450" alt="Dom klasyczny - projekt Szeszuła Architekci" loading="lazy" decoding="async"></a><figcaption><h3>Dom klasyczny</h3><p>Zwarta bryła, symetryczny front i wyważony detal: gzymsy, opaski, podziały okien.</p></figcaption></figure>
+    </div>
+    <div class="ster">
+      <div class="kropki" data-kropki="tor-proj"></div>
+      <div class="nav" data-tor="tor-proj">
+        <button type="button" data-k="-1" aria-label="Poprzednie projekty"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 6H2M6 1 1 6l5 5"/></svg></button>
+        <button type="button" data-k="1" aria-label="Następne projekty"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h20M16 1l5 5-5 5"/></svg></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sz" id="proces">
+  <div class="wrap pk">
+    <figure>
+      <div class="duet">
+        <a class="s" href="img/las_rysu1-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - szkic koncepcyjny"><img src="img/las_rysu1-800.webp" width="665" height="900" alt="Odręczny szkic koncepcyjny rzutu i przekroju domu" loading="lazy" decoding="async"></a>
+        <a href="img/las-1600.webp" data-lb="proc" data-cap="Drewniany dom pod lasem - wizualizacja"><img src="img/las-800.webp" width="800" height="800" alt="Wizualizacja drewnianego domu pod lasem" loading="lazy" decoding="async"></a>
+      </div>
+      <figcaption>Drewniany dom pod lasem: od odręcznego szkicu do wizualizacji.</figcaption>
+    </figure>
+    <div class="tx">
+      <h2 class="k">Od kreski do projektu</h2>
+      <ul class="etapy">
+        <li><b>Rozmowa i działka</b><span>Zbieramy potrzeby inwestorów i analizujemy działkę: kierunki świata, światło, sąsiedztwo. Pomagamy uzyskać decyzję o warunkach zabudowy.</span></li>
+        <li><b>Rysunek</b><span>Przekładamy rozmowę na rzuty, przekroje i wizualizacje. Dopracowujemy je tak długo, aż usłyszymy, że to jest dokładnie to.</span></li>
+        <li><b>Branże od początku</b><span>Koncepcję od wczesnego etapu konsultujemy z projektantami konstrukcji i instalacji, żeby od razu optymalizować projekt.</span></li>
+        <li><b>Projekt budowlany i techniczny</b><span>Pełnobranżowa dokumentacja i kontrola procedur urzędowych.</span></li>
+        <li><b>Budowa i wnętrza</b><span>Nadzór nad budową, a na końcu aranżacja wnętrz.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="dk" id="urbanistyka">
+  <div class="wrap">
+    <div class="ub">
+      <div class="tx">
+        <h2 class="k">Urbanistyka: od szkicu dzielnicy do decyzji</h2>
+        <p>Koncepcje urbanistyczne i programowo-przestrzenne dla terenów pod zabudowę, także te potrzebne do uzyskania decyzji o warunkach zabudowy i zmiany przeznaczenia terenu. Projektujemy osiedla, kwartały zabudowy i nowe dzielnice.</p>
+        <ul class="lista">
+          <li>„Zielone Wzgórza” - nowa dzielnica w Pile, konkurs urbanistyczny</li>
+          <li>Zagospodarowanie „Wolnych Torów” w Poznaniu - konkurs urbanistyczny</li>
+          <li>„Nowe Podolany” - projekt urbanistyczny i rysunki koncepcyjne</li>
+          <li>Osiedle w rejonie Fortu VI przy ul. Jasielskiej w Poznaniu</li>
+        </ul>
+      </div>
+      <figure>
+        <a href="img/pila2-1600.webp" data-lb="urb0" data-cap="„Zielone Wzgórza”, Piła - szkic koncepcyjny"><img src="img/pila2-800.webp" width="800" height="1166" alt="Odręczny szkic koncepcyjny układu nowej dzielnicy w Pile" loading="lazy" decoding="async"></a>
+        <figcaption>„Zielone Wzgórza”, Piła - szkic koncepcyjny.</figcaption>
+      </figure>
+    </div>
+    <div class="utor">
+      <div class="tor" id="tor-urb">
+<a class="uk" href="img/u31-1600.webp" data-lb="urb" data-cap="Szczegółowa koncepcja urbanistyczno-architektoniczna"><img src="img/u31-800.webp" width="800" height="562" alt="Szczegółowa koncepcja urbanistyczno-architektoniczna" loading="lazy" decoding="async"><span>Szczegółowa koncepcja urbanistyczno-architektoniczna</span></a>
+<a class="uk" href="img/u2-1600.webp" data-lb="urb" data-cap="Koncepcja kwartału zabudowy, Nowe Podolany"><img src="img/u2-800.webp" width="800" height="528" alt="Koncepcja kwartału zabudowy, Nowe Podolany" loading="lazy" decoding="async"><span>Koncepcja kwartału zabudowy, Nowe Podolany</span></a>
+<a class="uk" href="img/u_osiedle-1600.webp" data-lb="urb" data-cap="Koncepcja osiedla zabudowy wielorodzinnej"><img src="img/u_osiedle-800.webp" width="800" height="450" alt="Koncepcja osiedla zabudowy wielorodzinnej" loading="lazy" decoding="async"><span>Koncepcja osiedla zabudowy wielorodzinnej</span></a>
+<a class="uk" href="img/pod2-1600.webp" data-lb="urb" data-cap="Nowe Podolany, 2007 - rysunki odręczne"><img src="img/pod2-800.webp" width="800" height="493" alt="Nowe Podolany, 2007 - rysunki odręczne" loading="lazy" decoding="async"><span>Nowe Podolany, 2007 - rysunki odręczne</span></a>
+<a class="uk" href="img/u1-1600.webp" data-lb="urb" data-cap="Wolne Tory - konkurs urbanistyczny"><img src="img/u1-800.webp" width="800" height="1087" alt="Wolne Tory - konkurs urbanistyczny" loading="lazy" decoding="async"><span>Wolne Tory - konkurs urbanistyczny</span></a>
+      </div>
+      <div class="ster">
+        <div class="kropki" data-kropki="tor-urb" hidden></div>
+        <div class="nav" data-tor="tor-urb">
+          <button type="button" data-k="-1" aria-label="Poprzednie"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 6H2M6 1 1 6l5 5"/></svg></button>
+          <button type="button" data-k="1" aria-label="Następne"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h20M16 1l5 5-5 5"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="wnetrza">
+  <div class="wrap">
+    <div class="hd">
+      <div class="tx">
+        <h2 class="k">Wnętrza</h2>
+        <p>Projekty wnętrz domów i mieszkań: minimalistyczne, funkcjonalne, nieszablonowe, tworzone według wymagań mieszkańców. Często kończymy nimi dom, który sami zaprojektowaliśmy.</p>
+      </div>
+    </div>
+    <div class="wg">
+<a class="wk wk0" href="img/w5-1600.webp" data-lb="wn" data-cap="Dom w Puszczykowie"><img src="img/w5-800.webp" width="800" height="450" alt="Dom w Puszczykowie" loading="lazy" decoding="async"><span>Dom w Puszczykowie</span></a>
+<a class="wk wk1" href="img/w_kanc-1600.webp" data-lb="wn" data-cap="Kancelaria i kawalerka w kamienicy, Stare Miasto"><img src="img/w_kanc-800.webp" width="800" height="533" alt="Kancelaria i kawalerka w kamienicy, Stare Miasto" loading="lazy" decoding="async"><span>Kancelaria i kawalerka w kamienicy, Stare Miasto</span></a>
+<a class="wk wk2" href="img/w_bukowska-1600.webp" data-lb="wn" data-cap="Mieszkanie na osiedlu Wille Bukowska"><img src="img/w_bukowska-800.webp" width="800" height="533" alt="Mieszkanie na osiedlu Wille Bukowska" loading="lazy" decoding="async"><span>Mieszkanie na osiedlu Wille Bukowska</span></a>
+<a class="wk wk3" href="img/w_dom-1600.webp" data-lb="wn" data-cap="Dom jednorodzinny nad jeziorem - realizacja"><img src="img/w_dom-800.webp" width="800" height="583" alt="Dom jednorodzinny nad jeziorem - realizacja" loading="lazy" decoding="async"><span>Dom jednorodzinny nad jeziorem - realizacja</span></a>
+<a class="wk wk4" href="img/w_laz-1600.webp" data-lb="wn" data-cap="Projekt łazienki z wolnostojącą wanną"><img src="img/w_laz-800.webp" width="800" height="593" alt="Projekt łazienki z wolnostojącą wanną" loading="lazy" decoding="async"><span>Projekt łazienki z wolnostojącą wanną</span></a>
+<a class="wk wk5" href="img/w_syp1-1600.webp" data-lb="wn" data-cap="Projekt sypialni"><img src="img/w_syp1-800.webp" width="800" height="445" alt="Projekt sypialni" loading="lazy" decoding="async"><span>Projekt sypialni</span></a>
+    </div>
+    <div class="wnote">
+      <p><b>Kancelaria i kawalerka, Stare Miasto.</b> Podział wnętrza XIX-wiecznej kamienicy na dwa lokale. Zachowaliśmy drewniane posadzki, odkryliśmy cegłę i wyeksponowaliśmy masywne nadproża.</p>
+      <p><b>Wille Bukowska.</b> Zaczęliśmy od zmian w układzie: przejście na piętro przenieśliśmy z salonu do nowego holu, a korytarz poszerzyliśmy i doświetliliśmy.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sz" id="pracownia">
+  <div class="wrap om">
+    <figure>
+      <div class="ph"><img src="img/szeszula-800.webp" width="800" height="1113" alt="dr inż. arch. Waldemar Szeszuła" loading="lazy" decoding="async"></div>
+      <figcaption>dr inż. arch. Waldemar Szeszuła</figcaption>
+    </figure>
+    <div class="tx">
+      <h2 class="k">Pracownia</h2>
+      <p class="mocny">Wykonujemy pełnobranżowe projekty architektoniczne i urbanistyczne: od decyzji o warunkach zabudowy, przez wszystkie fazy projektu i procedury urzędowe, po nadzór nad budową i aranżację wnętrz.</p>
+      <p>Twórcą pracowni i jej wiodącym projektantem jest dr inż. arch. Waldemar Szeszuła - architekt, urbanista, pracownik naukowy i dydaktyczny Wydziału Architektury Politechniki Poznańskiej, sędzia sądu konkursowego Stowarzyszenia Architektów Polskich w Poznaniu oraz sądu dyscyplinarnego Wielkopolskiej Okręgowej Izby Architektów.</p>
+      <p>Projektujemy domy i rezydencje dla inwestorów indywidualnych, budynki i osiedla wielorodzinne dla deweloperów, obiekty usługowe i użyteczności publicznej, przebudowy, nadbudowy i rozbudowy. Pracownia jest w Poznaniu, projekty prowadzimy w całym kraju.</p>
+      <div class="soc"><a href="https://www.instagram.com/szeszulaarchitekci/" rel="noopener" target="_blank">Instagram</a><a href="https://www.facebook.com/szeszulaarchitekci/" rel="noopener" target="_blank">Facebook</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap kt">
+    <div class="dane">
+      <h2 class="k">Porozmawiajmy o działce</h2>
+      <a class="tl" href="tel:+48666664661">+48 666 664 661</a>
+      <dl>
+        <dt>E-mail</dt><dd><a href="mailto:pracownia@szeszula.pl">pracownia@szeszula.pl</a></dd>
+        <dt>Pracownia</dt><dd>ul. Jana Matejki 48/49 m. 30<br>60-767 Poznań</dd>
+      </dl>
+      <div class="mapa" id="mapa" data-src="https://www.google.com/maps?q=Jana+Matejki+48,+60-767+Pozna%C5%84&amp;output=embed" data-title="Mapa dojazdu - Szeszuła Architekci, ul. Jana Matejki 48/49, Poznań"></div>
+    </div>
+    <form class="form" id="form" novalidate>
+      <h3>Zostaw numer, oddzwonimy</h3>
+      <p class="i">Napisz kilka słów o działce albo planowanej inwestycji.</p>
+      <label for="f1">Imię i nazwisko</label><input id="f1" name="imie" autocomplete="name">
+      <label for="f2">Telefon lub e-mail</label><input id="f2" name="kontakt" autocomplete="tel">
+      <label for="f3">Wiadomość</label><textarea id="f3" name="tresc"></textarea>
+      <button class="btn" type="submit">Wyślij <svg viewBox="0 0 18 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 5h16M12 1l4 4-4 4"/></svg></button>
+      <p class="ok" id="info" hidden tabindex="-1">To podgląd strony - formularz nie wysyła jeszcze wiadomości.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer class="stopka">
+  <div class="wrap">
+    <div class="g">
+      <div>
+        <a class="logo" href="#"><b>SZESZUŁA</b><small>ARCHITEKCI</small></a>
+        <p class="kpo">Zakup nowego zeroemisyjnego pojazdu elektrycznego kategorii M1 został objęty wsparciem w ramach programu priorytetowego „NaszEauto”, finansowanego ze środków Krajowego Planu Odbudowy i Zwiększania Odporności. Wartość wsparcia: 30 000 zł.</p>
+      </div>
+      <div>
+        <h4>Pracownia</h4>
+        <ul><li><a href="#projekty">Architektura</a></li><li><a href="#urbanistyka">Urbanistyka</a></li><li><a href="#wnetrza">Wnętrza</a></li><li><a href="#pracownia">O pracowni</a></li></ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul><li><a href="tel:+48666664661">+48 666 664 661</a></li><li><a href="mailto:pracownia@szeszula.pl">pracownia@szeszula.pl</a></li><li>ul. Jana Matejki 48/49 m. 30</li><li>60-767 Poznań</li></ul>
+      </div>
+    </div>
+    <div class="dol">
+      <span>© <span id="rok">2026</span> Szeszuła Architekci</span>
+      <a class="wylinka-badge" href="https://wylinka.pl/?utm_source=szeszula.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+    </div>
+  </div>
+</footer>
+
+<div class="mob" id="mob"><a href="tel:+48666664661"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.2 1.6 6.3 4.4 5 6.2c.8 1.8 2.2 3.3 4 4.1l1.8-1.3 2.8 2.1-1 2.5C7.2 13.6 2.4 8.8 1.7 3.4z"/></svg>Zadzwoń: 666 664 661</a></div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+  <figure><img id="lbi" alt=""><figcaption id="lbc"></figcaption></figure>
+  <button class="x" type="button" aria-label="Zamknij"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M1 1l12 12M13 1 1 13"/></svg></button>
+  <button class="pv" type="button" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 6H2M6 1 1 6l5 5"/></svg></button>
+  <button class="nx" type="button" aria-label="Następne zdjęcie"><svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M0 6h20M16 1l5 5-5 5"/></svg></button>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
